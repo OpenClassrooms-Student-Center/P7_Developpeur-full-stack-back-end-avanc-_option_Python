@@ -1,0 +1,240 @@
+[
+  {
+    "model": "transports.destinataire",
+    "pk": 1,
+    "fields": {
+      "nom": "Pharmacie du Vieux Port",
+      "type_etablissement": "PHARMACIE",
+      "adresse": "14 quai des Belges",
+      "code_postal": "13001",
+      "ville": "Marseille",
+      "email_contact": "contact@pharmacie-vieuxport.example",
+      "telephone_contact": "04 91 00 11 22"
+    }
+  },
+  {
+    "model": "transports.destinataire",
+    "pk": 2,
+    "fields": {
+      "nom": "Centre Hospitalier de la Durance",
+      "type_etablissement": "HOPITAL",
+      "adresse": "2 avenue des Alpilles",
+      "code_postal": "13200",
+      "ville": "Arles",
+      "email_contact": "pharmacie.centrale@ch-durance.example",
+      "telephone_contact": "04 90 00 33 44"
+    }
+  },
+  {
+    "model": "transports.destinataire",
+    "pk": 3,
+    "fields": {
+      "nom": "Laboratoire Biolys Provence",
+      "type_etablissement": "LABORATOIRE",
+      "adresse": "88 chemin de la Plaine",
+      "code_postal": "84000",
+      "ville": "Avignon",
+      "email_contact": "reception@biolys-provence.example",
+      "telephone_contact": "04 32 00 55 66"
+    }
+  },
+  {
+    "model": "transports.transport",
+    "pk": 1,
+    "fields": {
+      "reference": "TR-2024-0001",
+      "type_produit": "MEDICAMENT",
+      "destinataire": 1,
+      "temperature_min": "2.0",
+      "temperature_max": "8.0",
+      "date_depart": "2024-11-04T06:30:00+01:00",
+      "date_arrivee_prevue": "2024-11-04T09:00:00+01:00",
+      "date_livraison": "2024-11-04T08:52:00+01:00",
+      "statut": "LIVRE",
+      "commentaire": "Vaccins saisonniers, 12 colis."
+    }
+  },
+  {
+    "model": "transports.transport",
+    "pk": 2,
+    "fields": {
+      "reference": "TR-2024-0002",
+      "type_produit": "ECHANTILLON",
+      "destinataire": 3,
+      "temperature_min": "-25.0",
+      "temperature_max": "-15.0",
+      "date_depart": "2024-11-05T05:15:00+01:00",
+      "date_arrivee_prevue": "2024-11-05T08:30:00+01:00",
+      "date_livraison": null,
+      "statut": "EN_COURS",
+      "commentaire": "Échantillons congelés, caisson isotherme n° 7.",
+      "nom_patient": "Marcel Bonnefoy",
+      "date_naissance_patient": "1948-07-23"
+    }
+  },
+  {
+    "model": "transports.transport",
+    "pk": 3,
+    "fields": {
+      "reference": "TR-2024-0003",
+      "type_produit": "DISPOSITIF",
+      "destinataire": 2,
+      "temperature_min": "15.0",
+      "temperature_max": "25.0",
+      "date_depart": "2024-11-06T07:00:00+01:00",
+      "date_arrivee_prevue": "2024-11-06T10:30:00+01:00",
+      "date_livraison": null,
+      "statut": "PLANIFIE",
+      "commentaire": ""
+    }
+  },
+  {
+    "model": "transports.transport",
+    "pk": 4,
+    "fields": {
+      "reference": "TR-2024-0004",
+      "type_produit": "MEDICAMENT",
+      "destinataire": 2,
+      "temperature_min": "2.0",
+      "temperature_max": "8.0",
+      "date_depart": "2024-11-05T13:00:00+01:00",
+      "date_arrivee_prevue": "2024-11-05T16:00:00+01:00",
+      "date_livraison": null,
+      "statut": "INCIDENT",
+      "commentaire": "Chaîne du froid à vérifier avec le destinataire."
+    }
+  },
+  {
+    "model": "transports.relevetemperature",
+    "pk": 1,
+    "fields": {
+      "transport": 1,
+      "horodatage": "2024-11-04T06:45:00+01:00",
+      "valeur": "4.2",
+      "hors_plage": false
+    }
+  },
+  {
+    "model": "transports.relevetemperature",
+    "pk": 2,
+    "fields": {
+      "transport": 1,
+      "horodatage": "2024-11-04T07:30:00+01:00",
+      "valeur": "0.5",
+      "hors_plage": false
+    }
+  },
+  {
+    "model": "transports.relevetemperature",
+    "pk": 3,
+    "fields": {
+      "transport": 1,
+      "horodatage": "2024-11-04T08:15:00+01:00",
+      "valeur": "3.8",
+      "hors_plage": false
+    }
+  },
+  {
+    "model": "transports.relevetemperature",
+    "pk": 4,
+    "fields": {
+      "transport": 1,
+      "horodatage": "2024-11-04T08:50:00+01:00",
+      "valeur": "5.1",
+      "hors_plage": false
+    }
+  },
+  {
+    "model": "transports.relevetemperature",
+    "pk": 5,
+    "fields": {
+      "transport": 2,
+      "horodatage": "2024-11-05T05:30:00+01:00",
+      "valeur": "-21.0",
+      "hors_plage": false
+    }
+  },
+  {
+    "model": "transports.relevetemperature",
+    "pk": 6,
+    "fields": {
+      "transport": 2,
+      "horodatage": "2024-11-05T06:30:00+01:00",
+      "valeur": "-19.5",
+      "hors_plage": false
+    }
+  },
+  {
+    "model": "transports.relevetemperature",
+    "pk": 7,
+    "fields": {
+      "transport": 2,
+      "horodatage": "2024-11-05T07:30:00+01:00",
+      "valeur": "-18.2",
+      "hors_plage": false
+    }
+  },
+  {
+    "model": "transports.relevetemperature",
+    "pk": 8,
+    "fields": {
+      "transport": 4,
+      "horodatage": "2024-11-05T13:20:00+01:00",
+      "valeur": "6.4",
+      "hors_plage": false
+    }
+  },
+  {
+    "model": "transports.relevetemperature",
+    "pk": 9,
+    "fields": {
+      "transport": 4,
+      "horodatage": "2024-11-05T14:10:00+01:00",
+      "valeur": "9.7",
+      "hors_plage": true
+    }
+  },
+  {
+    "model": "transports.relevetemperature",
+    "pk": 10,
+    "fields": {
+      "transport": 4,
+      "horodatage": "2024-11-05T15:00:00+01:00",
+      "valeur": "11.3",
+      "hors_plage": true
+    }
+  },
+  {
+    "model": "comptes.operateur",
+    "pk": 1,
+    "fields": {
+      "login": "evasseur",
+      "mot_de_passe": "Santelog2024!",
+      "role": "RESPONSABLE",
+      "jeton": "",
+      "actif": true
+    }
+  },
+  {
+    "model": "comptes.operateur",
+    "pk": 2,
+    "fields": {
+      "login": "kmartin",
+      "mot_de_passe": "transport123",
+      "role": "LIVREUR",
+      "jeton": "",
+      "actif": true
+    }
+  },
+  {
+    "model": "comptes.operateur",
+    "pk": 3,
+    "fields": {
+      "login": "svc-export",
+      "mot_de_passe": "Exp0rt-Nuit!2023",
+      "role": "ADMIN",
+      "jeton": "",
+      "actif": true
+    }
+  }
+]
